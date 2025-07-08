@@ -6,8 +6,6 @@
     font-weight: 400px;
     font-style: normal;
     background: white;
-
-    
 }
 
 
@@ -16,6 +14,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex: 1;
+    
 }
 
 .main{
@@ -23,11 +24,12 @@ body{
     display:flex;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 70px;
 }
 .left-container{
     /* border: 1px solid pink; */
     display: flex;
-    flex-direction:column; 
+    flex-direction:column;
 }
 .img-section{
     /* background-color: black; */
@@ -42,9 +44,9 @@ body{
     border-radius:50% ;
 }
 .outline{
-    height: 210px;
-    width: 210px;
-    /* border-radius: 1px solid pink; */
+    height: 220px;
+    width: 220px;
+    border: 2px solid pink;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -58,9 +60,33 @@ body{
 
 .icon-section{
     /* border-radius: 1px solid pink; */
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 
+.btn{
+    color: black!important;
+    text-align: left !important;
+    transition: width 0.3s ease;
+}
+
+.btn:hover {
+  color: red !important;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn svg{
+    width: 21px;
+    height: 21px;
+    color:rgb(192, 178, 178);
+    padding-right: 5px;
+}
+.btn svg:hover{
+    background-color: #0056b3 !important;
+}
 .right-container{
     /* border-radius: 1px solid blue; */
     display: flex;
@@ -71,4 +97,57 @@ body{
 .right-container img{
     width: 400px;
 }
+
+@media(max-width: 768px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .outline{
+        margin-left: 50px;
+    }
+    .img-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        width: 100%;
+        height: 100%;
+        border-radius:50% ;
+}
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+        width: 80%;
+    }
+    .icon-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    footer{
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .btn{
+        border: 1px solid black !important;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .right-container img{
+        display: none;
+    }
+
+}
+
 
