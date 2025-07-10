@@ -25,6 +25,9 @@ body{
     align-items: center;
     margin-top: 100px;
     margin-bottom: 70px;
+     opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
 }
 /* .comment{
     text-align: right;
@@ -158,6 +161,14 @@ body{
         display: none;
     }
 
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
